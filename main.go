@@ -9,12 +9,10 @@ import (
 var (
 	ipList   []string
 	portList []int
-	runNum   int
 )
 
 func init() {
 	runtime.GOMAXPROCS(runtime.NumCPU() - 1)
-	runNum = 1000
 	for s := 1; s <= 255; s++ {
 		ipList = append(ipList, fmt.Sprintf("192.168.10.%d", s))
 	}
